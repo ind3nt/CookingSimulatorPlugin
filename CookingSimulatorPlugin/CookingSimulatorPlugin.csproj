@@ -95,19 +95,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Features\Products\Apple.cs" />
     <Compile Include="API\Features\Products\Bun.cs" />
     <Compile Include="API\Features\Products\Burger.cs" />
     <Compile Include="API\Features\Products\CraftableProducts.cs" />
     <Compile Include="API\Features\Products\Enums\ProductTypes.cs" />
     <Compile Include="API\Features\Products\Ingredient.cs" />
+    <Compile Include="API\Features\Products\OliveOil.cs" />
     <Compile Include="API\Features\Products\Patty.cs" />
     <Compile Include="API\Features\Products\Product.cs" />
+    <Compile Include="API\Features\Products\Lettuce.cs" />
+    <Compile Include="API\Features\Products\Salad.cs" />
+    <Compile Include="API\Features\Products\Tomato.cs" />
     <Compile Include="Commands\GetInventory.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Events\PlayerEvents.cs" />
     <Compile Include="PlayersStorage.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using CommandSystem;
+using CookingSimulatorPlugin.API.Features.Products;
 using Exiled.API.Features;
 
 namespace CookingSimulatorPlugin.Commands
@@ -26,15 +27,22 @@ namespace CookingSimulatorPlugin.Commands
                     return false;
                 }
 
-                string message = Plugin.Storage.GetInventory(player);
+                Product[] playerProducts = Utilities.GetInventory(player);
 
-                if (message == null)
+                if (playerProducts == null)
                 {
                     response = "Ваш инвентарь пуст!";
                     return false;
                 }
+
+                string message = "\nИнгредиенты в инвентаре:\n";
+
+                foreach (Product product in playerProducts)
+                {
+                    message = message + $"- {product.Name}\n";
+                }
                     
-                response = Plugin.Storage.GetInventory(player);
+                response = message;
                 return true;
             }
         }

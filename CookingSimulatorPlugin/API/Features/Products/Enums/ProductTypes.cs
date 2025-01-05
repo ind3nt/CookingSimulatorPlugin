@@ -4,10 +4,12 @@
     {
         None,
         Apple,
-        Orange,
         Salad,
+        Lettuce,
+        OliveOil,
         Burger,
         Patty,
+        Tomato,
         Bun
     }
 }

@@ -16,19 +16,18 @@ namespace CookingSimulatorPlugin.API.Features.Products
 
         public abstract bool CanBeFryed { get; }
 
-        public bool IsSliced = false;
+        public bool IsSliced { get; private set; }
 
-        public bool IsFryed = false;
+        public bool IsFryed { get; private set; }
 
         public abstract void Create(Player player);
 
         public bool IsCanCraft(Product[] playerIngredients)
         {
-            int i = 0;
+            var i = 0;
 
             foreach (var ingredient in playerIngredients)
             {
-
                 foreach (var ingredientType in Ingredients)
                 {
                     if (ingredientType.Type != ingredient.Type)
@@ -50,7 +49,7 @@ namespace CookingSimulatorPlugin.API.Features.Products
                 }
             }
 
-            if (i != Ingredients.Count())
+            if (i != Ingredients.Length)
             {
                 return false;
             }

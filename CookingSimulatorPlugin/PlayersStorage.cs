@@ -8,7 +8,7 @@ namespace CookingSimulatorPlugin
 {
     public class PlayersStorage
     {
-        private static Dictionary<Player, List<Product>> playerProducts = new Dictionary<Player, List<Product>>();
+        public static Dictionary<Player, List<Product>> playerProducts = new Dictionary<Player, List<Product>>();
 
         public bool Add(Player player, Product product)
         {
@@ -36,24 +36,6 @@ namespace CookingSimulatorPlugin
             return true;
         } 
 
-        public string GetInventory(Player player)
-        {
-            if (!playerProducts.ContainsKey(player))
-                return null;
-
-            if (playerProducts[player].Count <= 0)
-                return null;
-
-            string message = "\nСписок ингредиентов в инвентаре:\n";
-
-            foreach (Product product in playerProducts[player])
-            {
-                message = message + $"- {product.Name};\n";
-            }
-
-            return message;
-        }
-
         public void CheckCreate(Player player)
         {
             foreach (Product product in CraftableProducts.Products)
@@ -72,7 +54,7 @@ namespace CookingSimulatorPlugin
 
         public void Fry(Player player)
         {
-            foreach ( Product product in playerProducts[player])
+            foreach (Product product in playerProducts[player])
             {
                 if (product.CanBeFryed && !product.IsFryed)
                 {
