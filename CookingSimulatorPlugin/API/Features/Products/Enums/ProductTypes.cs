@@ -9,6 +9,7 @@
         OliveOil,
         Burger,
         Patty,
+        Cheese,
         Tomato,
         Bun
     }

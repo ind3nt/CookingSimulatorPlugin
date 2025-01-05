@@ -98,6 +98,7 @@
     <Compile Include="API\Features\Products\Apple.cs" />
     <Compile Include="API\Features\Products\Bun.cs" />
     <Compile Include="API\Features\Products\Burger.cs" />
+    <Compile Include="API\Features\Products\Cheese.cs" />
     <Compile Include="API\Features\Products\CraftableProducts.cs" />
     <Compile Include="API\Features\Products\Enums\ProductTypes.cs" />
     <Compile Include="API\Features\Products\Ingredient.cs" />

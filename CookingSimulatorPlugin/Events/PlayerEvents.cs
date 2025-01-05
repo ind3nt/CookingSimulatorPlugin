@@ -45,6 +45,15 @@ namespace CookingSimulatorPlugin.Events
                     ev.Player.Broadcast(3, $"Вы взяли лист салата!", Broadcast.BroadcastFlags.Normal, true);
                     break;
 
+                case "TakeCheese":
+                    if (!Plugin.Storage.Add(ev.Player, new Cheese()))
+                    {
+                        ev.Player.Broadcast(3, $"Сыр уже имеется у вас в инвентаре!", Broadcast.BroadcastFlags.Normal, true);
+                        break;
+                    }
+                    ev.Player.Broadcast(3, $"Вы взяли сыр!", Broadcast.BroadcastFlags.Normal, true);
+                    break;
+
                 case "TakeOliveOil":
                     if (!Plugin.Storage.Add(ev.Player, new OliveOil()))
                     {

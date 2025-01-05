@@ -14,7 +14,8 @@ namespace CookingSimulatorPlugin.API.Features.Products
             new Ingredient(ProductType.Patty, true, false), 
             new Ingredient(ProductType.Bun, false, true), 
             new Ingredient(ProductType.Tomato, false, true),
-            new Ingredient(ProductType.Lettuce, false, true)
+            new Ingredient(ProductType.Lettuce, false, true),
+            new Ingredient(ProductType.Cheese, false, true)
         };
 
         public override bool CanBeSliced => false;
