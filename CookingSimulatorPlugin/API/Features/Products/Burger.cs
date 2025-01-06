@@ -9,7 +9,7 @@ namespace CookingSimulatorPlugin.API.Features.Products
 
         public override string Name => "Бургер";
 
-        public override Ingredient[] Ingredients => new[] 
+        public override Ingredient[] Ingredients { get; } = new[] 
         { 
             new Ingredient(ProductType.Patty, true, false), 
             new Ingredient(ProductType.Bun, false, true), 

@@ -2,6 +2,6 @@
 {
     public class CraftableProducts
     {
-        public static Product[] Products = { new Burger() };
+        public static Product[] Products = { new Burger(), new Salad() };
     }
 }

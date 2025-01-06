@@ -10,7 +10,7 @@ namespace CookingSimulatorPlugin.API.Features.Products
 
         public override string Name => "Салат";
 
-        public override Ingredient[] Ingredients => new[] 
+        public override Ingredient[] Ingredients { get; } = new[]
         { 
             new Ingredient(ProductType.Apple, false, true), 
             new Ingredient(ProductType.Lettuce, false, true), 
